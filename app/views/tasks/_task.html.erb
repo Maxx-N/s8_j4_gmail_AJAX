@@ -1,1 +1,6 @@
-<li class="category-content"><%= task.title  %></li>
+<li>
+  <%= task.title  %>
+  <% unless task.deadline.nil? %>
+    , to read: <%= task.deadline.strftime('%D')  %>
+  <% end %>
+</li>
