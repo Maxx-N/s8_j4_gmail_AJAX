@@ -1,3 +1,7 @@
 <h6 id="object-<%= email.id %>">
-  <%= link_to "#{email.object}", email_path(email.id), remote: true %>
+  <% if email.read === false %>
+    <%= link_to "#{email.object}", email_path(email.id), remote: true %>
+  <% else %>
+    <%= link_to "#{email.object}", email_path(email.id), remote: true, :class => "text-dark" %>
+  <% end %>
 </h6>
