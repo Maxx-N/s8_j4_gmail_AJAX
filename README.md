@@ -15,7 +15,7 @@
 
     2) Dans votre navigateur, saisir l'URL :
 
-        http://localhost:3000/
+            http://localhost:3000/
 
 
 **__LIEN HEROKU :__**
