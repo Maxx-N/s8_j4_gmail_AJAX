@@ -11,6 +11,7 @@
         <%= task.title  %>
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>
+        <%= fa_icon "trash" %>
         <% end %>
       </li>
       <% end %>
