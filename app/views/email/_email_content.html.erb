@@ -2,11 +2,11 @@
   <h2 class="text-center">
     <%= email.object %>
   </h2>
-    <hr><br>
+    <hr><br><br><br>
   <p>
     <%= email.body %>
   </p>
-  <br>
+  <br><br><br>
   <div class="row">
     <% if email.read === true %>
       <div id="read-btn" class="col-sm">
@@ -16,7 +16,7 @@
       <div id="read-btn" class="col-sm">
         <%= button_to "Marquer comme lu", email_path(email.id), method: :put, :class => "text-light col-sm btn-success", remote: true %>
       </div>
-    <% end %> 
+    <% end %>
     <div class="col-sm">
       <%= button_to "Supprimer", email_path(email.id), method: :delete, :class => "text-light col-sm btn-danger", remote: true %>
     </div>
