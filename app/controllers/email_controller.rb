@@ -13,10 +13,8 @@ class EmailController < ApplicationController
         format.html { redirect_to email_index_path }
         format.js { }
       end
-      flash[:notice] = "Email créé"
     else
       redirect_to root_path
-      flash[:notice] = "Essaye encore ..."
     end
   end
 
@@ -37,7 +35,6 @@ class EmailController < ApplicationController
       format.html { redirect_to email_index_path }
       format.js { }
     end
-    flash[:notice] = "Email supprimé"
   end
 
   def update
