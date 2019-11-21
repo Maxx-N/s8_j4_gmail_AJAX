@@ -39,6 +39,12 @@ class EmailController < ApplicationController
     end
     flash[:notice] = "Email supprimé"
   end
+
+  def update
+    @email = Email.find(params[:id])
+    @email.read = false
+    @email.save
+  end
 end
 
 
