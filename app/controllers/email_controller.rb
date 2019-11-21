@@ -32,12 +32,11 @@ class EmailController < ApplicationController
   def destroy
     @email = Email.find(params[:id])
     @email.destroy
-    flash[:notice] = "Email supprimé"
     respond_to do |format|
       format.html { redirect_to email_index_path }
       format.js { }
     end
-
+    flash[:notice] = "Email supprimé"
   end
 end
 

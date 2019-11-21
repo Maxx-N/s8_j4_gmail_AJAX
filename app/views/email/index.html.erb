@@ -13,7 +13,7 @@
         <br><hr><br>
         <ul id="objects-list">
           <% @emails.each do |email| %>
-            <h6><%= link_to "#{email.object}", email_path(email.id), remote: true %></h6>
+            <h6 id="object-<%= email.id %>"><%= link_to "#{email.object}", email_path(email.id), remote: true %></h6>
           <% end %>
         </ul>
       </div>
