@@ -1,24 +1,25 @@
-# README
+**__POUR LANCER L'APP EN LOCAL :__**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    1) Dans votre terminal, tapez les commandes : 
 
-Things you may want to cover:
+        * git clone https://github.com/Maxx-N/s8_j4_gmail_AJAX.git
 
-* Ruby version
+        * s8_j4_gmail_AJAX
 
-* System dependencies
+        * rails db:create
 
-* Configuration
+        * rails db:migrate
 
-* Database creation
+        * rails db:seed
 
-* Database initialization
+        * rails server
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+    2) Dans votre navigateur, saisir l'URL : 
 
-* Deployment instructions
+        http://localhost:3000/
 
-* ...
+
+**__LIEN HEROKU :__**
+
+    https://email-ajax-app.herokuapp.com/

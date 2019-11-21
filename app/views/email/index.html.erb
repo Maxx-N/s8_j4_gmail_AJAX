@@ -1,4 +1,4 @@
-<h1 class="text-center title"><strong>Emails</strong></h1>
+<h1 class="text-center"><strong>Emails</strong></h1>
 <br>
 <div class=text-center>
     <button>
@@ -18,7 +18,8 @@
                 <%= link_to "#{email.object}", email_path(email.id), remote: true %>
               <% else %>
                 <%= link_to "#{email.object}", email_path(email.id), remote: true, :class => "text-dark" %>
-              <% end %>  
+              <% end %>
+              <hr>
             </h6>
           <% end %>
         </ul>
