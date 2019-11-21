@@ -4,7 +4,7 @@
 
             git clone https://github.com/Maxx-N/s8_j4_gmail_AJAX.git
 
-            s8_j4_gmail_AJAX
+            cd s8_j4_gmail_AJAX
 
             rails db:create
 
