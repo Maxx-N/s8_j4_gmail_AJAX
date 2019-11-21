@@ -3,3 +3,5 @@ if (document.getElementById("email-content").childNodes[0]) {
 };
 
 document.getElementById("email-content").insertAdjacentHTML("beforeend", "<%= j render 'email_content', email: @email %>");
+
+document.getElementById("object-<%= @email.id %>").childNodes[1].classList.add("text-dark");
