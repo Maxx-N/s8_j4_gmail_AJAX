@@ -20,6 +20,10 @@ class EmailController < ApplicationController
       flash[:notice] = "Essaye encore ..."
     end
   end
+
+  def show
+    @email = Email.find(params[:id])
+  end
 end
 
 
