@@ -1,4 +1,4 @@
-listOfSquares = document.getElementsByTagName("h6");
+/*listOfSquares = document.getElementsByTagName("h6");
 
 for (let i = 0; i < listOfSquares.length; i++) {
   let square = listOfSquares[i];
@@ -7,6 +7,6 @@ for (let i = 0; i < listOfSquares.length; i++) {
   };
   square.addEventListener("click", onSquareClick);
 };
-
+*/
 
 
