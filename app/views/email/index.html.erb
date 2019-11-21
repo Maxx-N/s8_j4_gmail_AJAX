@@ -6,21 +6,21 @@
     </button>
 </div>
 <br>
-<div class="container text-center">
+<div class="container">
     <div class="row">
       <div class="col-sm">
-        <h2><u>Objet</u></h2>
+        <h2 class="text-center"><u>Objet</u></h2>
         <br><hr><br>
         <ul id="objects-list">
           <% @emails.each do |email| %>
-            <h4><%= link_to "#{email.object}", email_path(email.id), remote: true %></h4>
+            <h6><%= link_to "#{email.object}", email_path(email.id), remote: true %></h6>
           <% end %>
         </ul>
       </div>
 
       <div class="col-sm">
-        <h2><u>Contenu</u></h2>
-        <br><hr><br>
+        <h2 class="text-center"><u>Contenu</u></h2>
+        <br><hr>
         <div id="email-content">
         </div>
       </div>

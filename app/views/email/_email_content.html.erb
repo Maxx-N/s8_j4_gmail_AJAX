@@ -1,9 +1,15 @@
 <div>
-  <h2>
-    <em><%= email.object %></em>
+  <h2 class="text-center">
+    <%= email.object %>
   </h2>
-    <br><hr><br>
-  <h4>
+    <hr><br>
+  <p>
     <%= email.body %>
-  </h4>
+  </p>
+  <br>
+  <div class="row">
+      <button class="col-sm btn-info">Marquer comme non-lu</button>
+      <button class="col-sm btn-danger">Supprimer</button>
+  </div>
+
 </div>
