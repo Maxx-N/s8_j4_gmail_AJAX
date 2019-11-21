@@ -42,7 +42,11 @@ class EmailController < ApplicationController
 
   def update
     @email = Email.find(params[:id])
-    @email.read = false
+    if @email.read === true
+      @email.read = false
+    else
+      @email.read = true
+    end
     @email.save
     respond_to do |format|
       format.html { redirect_to email_index_path }

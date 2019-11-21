@@ -8,8 +8,12 @@
   </p>
   <br>
   <div class="row">
-      <button class="col-sm btn-info"><%= link_to "Marquer comme non-lu", email_path(email.id), method: :put, :class => "text-light", remote: true %></button>
-      <button class="col-sm btn-danger"><%= link_to "Supprimer", email_path(email.id), method: :delete, :class => "text-light", remote: true %></button>
+    <% if email.read === true %>
+      <button id="read-btn" class="col-sm btn-info"><%= link_to "Marquer comme non-lu", email_path(email.id), method: :put, :class => "text-light", remote: true %></button>
+    <% else %>
+      <button id="read-btn" class="col-sm btn-success"><%= link_to "Marquer comme lu", email_path(email.id), method: :put, :class => "text-light", remote: true %></button>
+    <% end %> 
+    <button class="col-sm btn-danger"><%= link_to "Supprimer", email_path(email.id), method: :delete, :class => "text-light", remote: true %></button>
   </div>
 
 </div>
