@@ -1,16 +1,11 @@
-
-
-Task.destroy_all
-Category.destroy_all
-Email.destroy_all
-
 require 'faker'
+Email.destroy_all
 
 5.times do |index|
   Email.create(
     id: index + 1,
-    object: "Email n° #{index +1}",
-    body: "#{index +1}" * 6
+    object: Faker::Company.unique.industry,
+    body: Faker::ChuckNorris.unique.fact
   )
 end
 
