@@ -1,9 +1,9 @@
 <h1 class="text-center"><strong>Emails</strong></h1>
 <br>
 <div class=text-center>
-    <button>
-      <%= link_to "Recevoir un email", email_index_path, method: :post, remote: true %>
-    </button>
+    <div>
+      <%= button_to "Recevoir un email", email_index_path, method: :post, remote: true, :class => "btn-primary" %>
+    </div>
 </div>
 <br>
 <div class="container">

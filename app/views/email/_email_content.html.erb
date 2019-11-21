@@ -9,11 +9,17 @@
   <br>
   <div class="row">
     <% if email.read === true %>
-      <button id="read-btn" class="col-sm btn-info"><%= link_to "Marquer comme non-lu", email_path(email.id), method: :put, :class => "text-light", remote: true %></button>
+      <div id="read-btn">
+        <%= button_to "Marquer comme non-lu", email_path(email.id), method: :put, :class => "text-light col-sm btn-info", remote: true %>
+      </div>
     <% else %>
-      <button id="read-btn" class="col-sm btn-success"><%= link_to "Marquer comme lu", email_path(email.id), method: :put, :class => "text-light", remote: true %></button>
+      <div id="read-btn">
+        <%= button_to "Marquer comme lu", email_path(email.id), method: :put, :class => "text-light col-sm btn-success", remote: true %>
+      </div>
     <% end %> 
-    <button class="col-sm btn-danger"><%= link_to "Supprimer", email_path(email.id), method: :delete, :class => "text-light", remote: true %></button>
+    <div>
+      <%= button_to "Supprimer", email_path(email.id), method: :delete, :class => "text-light col-sm btn-danger", remote: true %>
+    </div>
   </div>
 
 </div>
