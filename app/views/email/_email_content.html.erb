@@ -9,7 +9,7 @@
   <br>
   <div class="row">
       <button class="col-sm btn-info">Marquer comme non-lu</button>
-      <button class="col-sm btn-danger">Supprimer</button>
+      <button class="col-sm btn-danger"><%= link_to "Supprimer", email_path(email.id), method: :delete, :class => "text-light" %></button>
   </div>
 
 </div>

@@ -5,7 +5,7 @@ class EmailController < ApplicationController
 
   def create
     @email = Email.new
-    @email.id = Email.last.id + 1
+    @email.id = Email.all.length + 1
     @email.object = Faker::Company.unique.industry
     @email.body = Faker::ChuckNorris.unique.fact
     @email.save
@@ -28,7 +28,13 @@ class EmailController < ApplicationController
       format.html { }
       format.js { }
     end
+  end
 
+  def destroy
+    @email = Email.find(params[:id])
+    @email.destroy
+    flash[:notice] = "Email supprimé"
+    redirect_to email_index_path
   end
 end
 
