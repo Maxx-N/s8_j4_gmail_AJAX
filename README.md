@@ -5,6 +5,8 @@
             git clone https://github.com/Maxx-N/s8_j4_gmail_AJAX.git
 
             cd s8_j4_gmail_AJAX
+            
+            bundle install
 
             rails db:create
 
