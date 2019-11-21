@@ -4,9 +4,22 @@ class EmailController < ApplicationController
   end
 
   def create
-    Email.create(
-      object: Faker::Company.unique.industry,
-      body: Faker::ChuckNorris.unique.fact
-    )
+    @email = Email.new
+    @email.id = Email.last.id + 1
+    @email.object = Faker::Company.unique.industry
+    @email.body = Faker::ChuckNorris.unique.fact
+    @email.save
+    if @email.save
+      respond_to do |format|
+        format.html { redirect_to email_index_path }
+        format.js { }
+      end
+      flash[:notice] = "Email créé"
+    else
+      redirect_to root_path
+      flash[:notice] = "Essaye encore ..."
+    end
   end
 end
+
+
