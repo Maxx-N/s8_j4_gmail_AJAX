@@ -1,0 +1,2 @@
+document.getElementById("email-content").childNodes[0].remove();
+document.getElementById("email-content").insertAdjacentHTML("beforeend", "<%= j render 'email_content', email: @email %>");

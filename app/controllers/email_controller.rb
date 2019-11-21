@@ -23,6 +23,12 @@ class EmailController < ApplicationController
 
   def show
     @email = Email.find(params[:id])
+
+    respond_to do |format|
+      format.html { }
+      format.js { }
+    end
+
   end
 end
 

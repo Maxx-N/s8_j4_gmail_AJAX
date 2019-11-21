@@ -1,26 +1,28 @@
-<h1 class="text-center title"><strong><u>Emails</u></strong></h1>
-<br><br>
+<h1 class="text-center title"><strong>Emails</strong></h1>
+<br>
 <div class=text-center>
     <button>
       <%= link_to "Recevoir un email", email_index_path, method: :post, remote: true %>
     </button>
 </div>
-<br><br>
+<br>
 <div class="container text-center">
     <div class="row">
       <div class="col-sm">
-        <h2>Objet</h2>
-        <br>
+        <h2><u>Objet</u></h2>
+        <br><hr><br>
         <ul id="objects-list">
           <% @emails.each do |email| %>
-            <h4><%= link_to "#{email.object}", email_path(email.id) %></h4>
+            <h4><%= link_to "#{email.object}", email_path(email.id), remote: true %></h4>
           <% end %>
         </ul>
       </div>
 
       <div class="col-sm">
-        <h2>Contenu</h2>
-        <br>
+        <h2><u>Contenu</u></h2>
+        <br><hr><br>
+        <div id="email-content">
+        </div>
       </div>
     </div>
   </div>
