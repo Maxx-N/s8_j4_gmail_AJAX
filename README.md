@@ -1,6 +1,6 @@
 **__POUR LANCER L'APP EN LOCAL :__**
 
-    __1) Dans votre terminal, tapez les commandes :__
+    1) Dans votre terminal, tapez les commandes :
 
             git clone https://github.com/Maxx-N/s8_j4_gmail_AJAX.git
 
@@ -15,7 +15,7 @@
             rails server
 
 
-    __2) Dans votre navigateur, saisir l'URL :__
+    2) Dans votre navigateur, saisir l'URL :
 
         http://localhost:3000/
 
